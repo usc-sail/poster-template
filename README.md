@@ -1,5 +1,8 @@
 # Poster template for SAIL
 
+![Poster snapshot]
+(./images/Snapshot.png)
+
 ## Brief Description
 This is a template for posters for SAIL. It is an adaptation from [a0poster](https://www.ctan.org/pkg/a0poster?lang=en), with custom coloring and logos. 
 
