@@ -1,0 +1,118 @@
+\documentclass[a0,portrait]{a0poster}
+%%%Load packages
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{graphicx,wrapfig,bm}
+\usepackage[absolute]{textpos}
+\usepackage{pstcol}
+\usepackage{boxedminipage}
+\usepackage{color}
+\usepackage{url}
+\usepackage[inline]{enumitem}
+
+%%%Define "Section" environment for framed boxes
+%%%Usage: \begin{Section}{Name} blah blah blah \end{Section}
+\newenvironment{Section}[2]{
+	\par\vspace{1cm}
+	\fcolorbox{boxcol}{boxcol}{\begin{minipage}{\columnwidth}{\sffamily\LARGE\color{white}#1 }\end{minipage}}	%Draws solid colour box around title
+        %Typesets section name
+	\par\nobreak 
+	\fcolorbox{boxcol}{white}{\parbox{ \columnwidth\fboxsep\fboxrule\sffamily\large}{#2}}
+	\vspace{0.5cm}						%Add spacing below box
+}
+
+%%%Define heading
+\def\heading#1{
+	\begin{flushleft}
+    	\LARGE\sffamily{\color{Cardinal}#1}\vspace{4mm}
+    \end{flushleft}\large
+}
+
+%%Make title redefinition
+\makeatletter
+\renewcommand\@maketitle{
+	\null{\color{headingcol}\sffamily\VeryHuge\@title \par}\par
+}
+\makeatother
+
+\newlist{choices}{enumerate*}{1}
+\setlist[choices]{itemjoin = \hspace{1.125in}, label=(\Alph*)}
+
+\usepackage[left=0cm,right=0cm,bottom=0cm,top=0cm]{geometry}			%Reset margins
+\usepackage{mathpazo}			%Load palatino font & pazo math
+
+\definecolor{Cardinal}{rgb}{.6,.11,.12}
+\definecolor{Gold}{rgb}{1,.8,0}
+\definecolor{Black}{rgb}{0,0,0}
+
+\definecolor{headingcol}{rgb}{1,1,1}			%Colour of main title
+\definecolor{boxcol}{rgb}{0.6, 0.11, 0.12}		%Edge-colour of box and top banner
+\definecolor{boxcol2}{rgb}{1, 0.8, 0.0}		%Edge-colour of box and top banner
+\fboxsep=1.1cm							%Padding between box and text
+\setlength{\columnsep}{2cm}				%Set spacing between columns
+\TPGrid[50mm,50mm]{23}{12}
+
+\title{Poster template for SAIL}
+\setlength{\hoffset}{-1cm}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorbox{boxcol}{
+\begin{minipage}[b]{0.68\linewidth}
+	\vspace{2cm}
+	\maketitle
+	\vspace{1cm}
+\end{minipage}%
+\begin{minipage}[b]{0.3\linewidth}
+	\vspace{1cm}
+	\includegraphics[width=\textwidth]{images/transLogo.png}
+\end{minipage}}
+\\
+%%% Author box
+\colorbox{boxcol2}{
+	\hspace{1cm}
+    \begin{minipage}{1189mm}
+    	\vspace{0.5cm}
+        \color{Black}\sffamily\huge
+       Victor R. Martinez(\textit{victorrm@usc.edu})
+    \end{minipage}}
+    
+\hspace{1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Content block
+\begin{minipage}{0.96\textwidth}
+	\centering
+    %%% First column
+    \begin{minipage}[t]{0.32\textwidth}
+    	\begin{Section}{Summary}{
+        Example of summary block
+    	}\end{Section}%%End summary
+    \end{minipage}
+    \hspace{4cm}
+    %%% Second column
+    \begin{minipage}[t]{0.6\textwidth}
+    	\begin{Section}{Another section}{
+    	 }\end{Section}
+    \end{minipage}
+\end{minipage}%%End content block
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vfill 
+\hspace{-1cm}
+\colorbox{Black}{
+	\hspace{1cm}
+    \begin{minipage}[b]{\linewidth}
+    \includegraphics[scale=.5]{images/saillogotransparent.png}
+	\hfill
+    \end{minipage}
+}
+
+\hfill
+\end{document}
