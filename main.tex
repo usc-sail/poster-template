@@ -9,29 +9,30 @@
 \usepackage{color}
 \usepackage{url}
 \usepackage[inline]{enumitem}
+\RequirePackage{USCcolors}
 
 %%%Define "Section" environment for framed boxes
 %%%Usage: \begin{Section}{Name} blah blah blah \end{Section}
 \newenvironment{Section}[2]{
 	\par\vspace{1cm}
-	\fcolorbox{boxcol}{boxcol}{\begin{minipage}{\columnwidth}{\sffamily\LARGE\color{white}#1 }\end{minipage}}	%Draws solid colour box around title
+	\fcolorbox{cardinal}{cardinal}{\begin{minipage}{\columnwidth}{\sffamily\LARGE\color{white}#1 }\end{minipage}}	%Draws solid colour box around title
         %Typesets section name
 	\par\nobreak 
-	\fcolorbox{boxcol}{white}{\parbox{ \columnwidth\fboxsep\fboxrule\sffamily\large}{#2}}
+	\fcolorbox{cardinal}{white}{\parbox{ \columnwidth\fboxsep\fboxrule\sffamily\large}{#2}}
 	\vspace{0.5cm}						%Add spacing below box
 }
 
 %%%Define heading
 \def\heading#1{
 	\begin{flushleft}
-    	\LARGE\sffamily{\color{Cardinal}#1}\vspace{4mm}
+    	\LARGE\sffamily{\color{cardinal}#1}\vspace{4mm}
     \end{flushleft}\large
 }
 
 %%Make title redefinition
 \makeatletter
 \renewcommand\@maketitle{
-	\null{\color{headingcol}\sffamily\VeryHuge\@title \par}\par
+	\null{\color{white}\sffamily\VeryHuge\@title \par}\par
 }
 \makeatother
 
@@ -41,13 +42,8 @@
 \usepackage[left=0cm,right=0cm,bottom=0cm,top=0cm]{geometry}			%Reset margins
 \usepackage{mathpazo}			%Load palatino font & pazo math
 
-\definecolor{Cardinal}{rgb}{.6,.11,.12}
-\definecolor{Gold}{rgb}{1,.8,0}
-\definecolor{Black}{rgb}{0,0,0}
 
-\definecolor{headingcol}{rgb}{1,1,1}			%Colour of main title
-\definecolor{boxcol}{rgb}{0.6, 0.11, 0.12}		%Edge-colour of box and top banner
-\definecolor{boxcol2}{rgb}{1, 0.8, 0.0}		%Edge-colour of box and top banner
+
 \fboxsep=1.1cm							%Padding between box and text
 \setlength{\columnsep}{2cm}				%Set spacing between columns
 \TPGrid[50mm,50mm]{23}{12}
@@ -60,7 +56,7 @@
 % Begin title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\colorbox{boxcol}{
+\colorbox{cardinal}{
 \begin{minipage}[b]{0.68\linewidth}
 	\vspace{2cm}
 	\maketitle
@@ -72,12 +68,12 @@
 \end{minipage}}
 \\
 %%% Author box
-\colorbox{boxcol2}{
+\colorbox{gold}{
 	\hspace{1cm}
     \begin{minipage}{1189mm}
     	\vspace{0.5cm}
-        \color{Black}\sffamily\huge
-       Victor R. Martinez(\textit{victorrm@usc.edu})
+        \color{black}\sffamily\huge
+       Victor R. Martinez (\textit{victorrm@usc.edu}), Karel Mundnich (mundnich@usc.edu)
     \end{minipage}}
     
 \hspace{1cm}
@@ -106,7 +102,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vfill 
 \hspace{-1cm}
-\colorbox{Black}{
+\colorbox{cardinal}{
 	\hspace{1cm}
     \begin{minipage}[b]{\linewidth}
     \includegraphics[scale=.5]{images/saillogotransparent.png}
