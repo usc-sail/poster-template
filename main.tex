@@ -15,17 +15,17 @@
 %%%Usage: \begin{Section}{Name} blah blah blah \end{Section}
 \newenvironment{Section}[2]{
 	\par\vspace{1cm}
-	\fcolorbox{cardinal}{cardinal}{\begin{minipage}{\columnwidth}{\sffamily\LARGE\color{white}#1 }\end{minipage}}	%Draws solid colour box around title
+	\fcolorbox{Cardinal}{Cardinal}{\begin{minipage}{\columnwidth}{\sffamily\LARGE\color{white}#1 }\end{minipage}}	%Draws solid colour box around title
         %Typesets section name
 	\par\nobreak 
-	\fcolorbox{cardinal}{white}{\parbox{ \columnwidth\fboxsep\fboxrule\sffamily\large}{#2}}
+	\fcolorbox{Cardinal}{white}{\parbox{ \columnwidth\fboxsep\fboxrule\sffamily\large}{#2}}
 	\vspace{0.5cm}						%Add spacing below box
 }
 
 %%%Define heading
 \def\heading#1{
 	\begin{flushleft}
-    	\LARGE\sffamily{\color{cardinal}#1}\vspace{4mm}
+    	\LARGE\sffamily{\color{Cardinal}#1}\vspace{4mm}
     \end{flushleft}\large
 }
 
@@ -56,7 +56,7 @@
 % Begin title
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\colorbox{cardinal}{
+\colorbox{Cardinal}{
 \begin{minipage}[b]{0.68\linewidth}
 	\vspace{2cm}
 	\maketitle
@@ -68,11 +68,11 @@
 \end{minipage}}
 \\
 %%% Author box
-\colorbox{gold}{
+\colorbox{Gold}{
 	\hspace{1cm}
     \begin{minipage}{1189mm}
     	\vspace{0.5cm}
-        \color{black}\sffamily\huge
+        \color{Black}\sffamily\huge
        Victor R. Martinez (\textit{victorrm@usc.edu}), Karel Mundnich (mundnich@usc.edu)
     \end{minipage}}
     
@@ -86,7 +86,7 @@
     %%% First column
     \begin{minipage}[t]{0.32\textwidth}
     	\begin{Section}{Summary}{
-        Example of summary block
+This is a summary
     	}\end{Section}%%End summary
     \end{minipage}
     \hspace{4cm}
@@ -96,13 +96,12 @@
     	 }\end{Section}
     \end{minipage}
 \end{minipage}%%End content block
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Begin footer
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vfill 
 \hspace{-1cm}
-\colorbox{cardinal}{
+\colorbox{Cardinal}{
 	\hspace{1cm}
     \begin{minipage}[b]{\linewidth}
     \includegraphics[scale=.5]{images/saillogotransparent.png}
