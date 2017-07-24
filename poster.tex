@@ -1,0 +1,92 @@
+\documentclass{beamer}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\mode<presentation>{\usetheme{USC}}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} % required for rendering German special characters
+\usepackage{siunitx} %pretty measurement unit rendering
+\usepackage{hyperref} %enable hyperlink for urls
+\usepackage{ragged2e}
+\usepackage[font=small,justification=justified]{caption}
+\usepackage{array,booktabs,tabularx}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+% For tikz-generated figures
+\usepackage{pgfplots}
+  \pgfplotsset{compat=newest}
+  %% the following commands are needed for some matlab2tikz features
+  \usetikzlibrary{plotmarks}
+  \usetikzlibrary{arrows.meta}
+  \usepgfplotslibrary{patchplots}
+\usepackage{grffile}
+\usepackage{amsmath}
+
+
+\newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
+\sisetup{per=frac,fraction=sfrac}
+
+\title{\Huge SAIL Poster Template}
+\author{Karel Mundnich$^{1}$, Víctor Martínez$^{1}$}
+\institute[USC]{$^{1}$Signal Analysis and Interpretation Lab (SAIL), University of Southern California}
+\date{August 23, 2017} % This doesn't work, it's hardcoded into bearmerposter.sty
+
+% edit this depending on how tall your header is. We should make this scaling automatic :-/
+\newlength{\columnheight}
+\setlength{\columnheight}{104cm}
+
+\begin{document}
+\begin{frame}
+\begin{columns}
+	\begin{column}{.43\textwidth}
+		\begin{beamercolorbox}[center]{postercolumn}
+			\begin{minipage}{.98\textwidth}  % tweaks the width, makes a new \textwidth
+				\parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+					\begin{myblock}{Summary}
+						\input{sections/summary.tex}
+					\end{myblock}\vfill
+					
+					\begin{myblock}{Example tables}
+						\input{sections/example_table.tex}
+					\end{myblock}\vfill
+					
+					\begin{myblock}{Idea}
+					    \input{sections/example_figure.tex}
+					\end{myblock}\vfill
+					
+					\begin{myblock}{Algorithm: Modified Copeland's counting method}
+							\input{sections/example_algorithm.tex}
+					\end{myblock}\vfill
+
+		}\end{minipage}\end{beamercolorbox}
+	\end{column}
+	
+	
+	
+	\begin{column}{.57\textwidth}
+		\begin{beamercolorbox}[center]{postercolumn}
+			\begin{minipage}{.98\textwidth} % tweaks the width, makes a new \textwidth
+				\parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+					
+					\begin{myblock}{Assessment}
+						\input{sections/example_formulas.tex}
+					\end{myblock}\vfill
+					
+					\begin{myblock}{Results}
+						\input{sections/example_pgfplots.tex}
+					\end{myblock}\vfill
+
+					\begin{myblock}{Conclusions}
+						\input{sections/conclusions.tex}	
+					\end{myblock}\vfill
+
+					\begin{myblock}{References}
+						\footnotesize
+						\bibliographystyle{abbrv}
+						\bibliography{references.bib}
+					\end{myblock}\vfill
+		}\end{minipage}\end{beamercolorbox}
+	\end{column}
+\end{columns}
+\end{frame}
+\end{document}
