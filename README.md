@@ -3,27 +3,25 @@
 ![snapshot](/images/Snapshot.png?raw=True "SAIL poster template")
 
 ## Brief Description
-This is a template for posters for SAIL. It is an adaptation from [a0poster](https://www.ctan.org/pkg/a0poster?lang=en), with custom coloring and logos. 
+This is a template for posters for SAIL. It is an adaptation from [latex-beamerposter](https://www.github.com/latex-beamerposter), with custom coloring and logos. 
 
 ## Usage
-Modify the content block to your heart's content.
+Modify the content block to your heart's content. It can be set up as portrait (as example image) or landscape:
+
+```
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+```
 
 You can add a new column as follows:
 ```
-	\begin{minipage}[t]{col_width}
+	\begin{column}{0.45\textwidth}
 		%column content
-	\end{minipage}
+	\end{column}
 ```
-where `col_width` is the size of column.
 
-Add a new section (i.e., colored box) using 
-```
-	\begin{Section}{TITLE}{
-		%Section content
-	}\end{Section}
-```
+We recommend to use sections for clarity as provided in the example.
 
 TODO:
-	- Transform it into a template
-	- Manage author definition would be nice
-	- Many things more ...
+
+* Manage author definition would be nice
+* Many things more ...
