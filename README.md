@@ -1,6 +1,6 @@
 # Poster template for SAIL
 
-![snapshot](/images/Snapshot.png?raw=True "SAIL poster template")
+![snapshot](/img/Snapshot.png?raw=True "SAIL poster template")
 
 ## Brief Description
 This is a template for posters for SAIL. It is an adaptation from [latex-beamerposter](https://www.github.com/latex-beamerposter), with custom coloring and logos. 
