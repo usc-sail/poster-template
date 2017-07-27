@@ -1,9 +1,9 @@
 # Poster template for SAIL
 
-![snapshot](/images/Snapshot.png?raw=True "SAIL poster template")
+![snapshot](/img/Snapshot.png?raw=True "SAIL poster template")
 
 ## Brief Description
-This is a template for posters for SAIL. It is an adaptation from [latex-beamerposter](https://www.github.com/latex-beamerposter), with custom coloring and logos. 
+This is a template for posters for SAIL. It is an adaptation from [latex-beamerposter](https://github.com/deselaers/latex-beamerposter), with custom coloring and logos. 
 
 ## Usage
 Modify the content block to your heart's content. It can be set up as portrait (as example image) or landscape:
@@ -23,5 +23,6 @@ We recommend to use sections for clarity as provided in the example.
 
 TODO:
 
-* Manage author definition would be nice
-* Many things more ...
+* Manage date (currently hardcoded into today in `beamerthemeUSC.sty`)
+* Manage author email. Could use the `authblk` package
+* Use colors from `USCcolors.sty` in `beamerthemeUSC.sty`
